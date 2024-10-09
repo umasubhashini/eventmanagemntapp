@@ -1,3 +1,19 @@
+
+To-Do App Backend
+This project is the backend of a To-Do App developed using Node.js and Express.js. The backend handles user authentication (registration and login), managing to-do items, and interaction with a MongoDB database. The application is built in a secure and efficient manner, leveraging bcrypt for password hashing and JWT (JSON Web Token) for user authentication.
+
+Project Overview
+The To-Do App Backend is a REST API that enables users to register, log in, and manage their to-do tasks. The backend provides users with the ability to create tasks, mark them as completed, and delete tasks. This API communicates with a MongoDB database, where user and task data are stored securely. The app is designed with security in mind, ensuring user data is protected through hashed passwords and token-based authentication.
+
+Technologies Used
+Node.js: A JavaScript runtime built on Chrome’s V8 JavaScript engine, enabling the development of scalable and efficient server-side applications.
+Express.js: A web framework for Node.js used to simplify building APIs and handling HTTP requests.
+MongoDB: A NoSQL database used to store data in flexible, JSON-like documents.
+Mongoose: A MongoDB object modeling library for Node.js, allowing interaction with MongoDB using objects in JavaScript.
+bcrypt.js: A library used to hash passwords for secure storage.
+JWT (JSON Web Token): A secure token used for user authentication in APIs.
+CORS (Cross-Origin Resource Sharing): A middleware that allows or restricts resources to be requested from another domain.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +84,19 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+Database Schema
+User Schema
+username: String (Required, Unique)
+password: String (Hashed)
+Todo Schema
+task: String (Required)
+completed: Boolean (Default: false)
+Usage
+Once the backend is up and running, users can authenticate via the POST /api/auth/register and POST /api/auth/login endpoints. Upon successful login, a JWT token is issued. This token should be included in the Authorization header for requests to protected endpoints (such as creating, updating, or deleting todos).
+
+Contributing
+If you would like to contribute to the project, please fork the repository and submit a pull request. Any improvements, bug fixes, or suggestions are welcome. You can also open an issue for any bugs you encounter or to propose enhancements.
+
+License
+This project is licensed under the MIT License. See the LICENSE file for more details.
